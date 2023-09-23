@@ -32,7 +32,7 @@ function Person({
   billNumber,
 }: any) {
   return (
-    <div className="w-screen h-screen flex flex-col items-center ">
+    <div className="w-screen h-screen flex flex-col items-center">
       <h1 className="text-2xl py-16 font-bold">Billing Details</h1>
 
       <Card className="mb-16 w-80">
@@ -54,7 +54,7 @@ function Person({
         </CardContent>
       </Card>
 
-      <div className="flex flex-row gap-20">
+      <div className="flex flex-col md:flex-row gap-20">
         <Card className="">
           <CardHeader>
             <CardTitle>Shipping Information</CardTitle>
@@ -113,7 +113,11 @@ function Person({
           </CardContent>
         </Card>
       </div>
-      <Button onClick={() => setProceed(true)} className="mt-20  p-4">
+      <Button
+        onClick={() => setProceed(true)}
+        size="lg"
+        className="mt-20 mb-10 p-4 md:w-60 md:text-lg"
+      >
         Next
       </Button>
     </div>
